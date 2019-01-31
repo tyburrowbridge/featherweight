@@ -1,0 +1,14 @@
+// Colors
+
+// Greys
+$grey: rgba(10, 10, 10, 1);
+$grey--light: lighten($grey, 60%);
+$grey--super-light: lighten($grey, 90%);
+$grey--dark: darken($grey, 60%);
+$grey--super-dark: darken($grey, 90%);
+
+// Mint
+$mint: rgba(0, 50, 50, 1);
+
+// Whites
+$white: rgba(2, 2, 2, 1);

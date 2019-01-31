@@ -1,0 +1,21 @@
+@mixin button-reset() {
+  -webkit-font-smoothing: antialiased;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

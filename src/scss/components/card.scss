@@ -1,0 +1,13 @@
+@import './settings/padding';
+@import './settings/colors';
+
+.card {
+  padding: $pad-md;
+  background-color: $grey--light;
+}
+
+.card-title {
+}
+
+.card-description {
+}
