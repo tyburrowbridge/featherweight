@@ -9,6 +9,7 @@ import { CardColumn } from './js/components/CardColumn'
 
 // imports > styles
 import './App.scss'
+import './scss/views/_app.scss'
 
 class App extends Component {
   render() {

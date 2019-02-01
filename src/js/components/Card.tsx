@@ -4,9 +4,9 @@ interface CardProps {
   label?: string
 }
 
-const Card: React.SFC<CardProps> = props => {
+export const Card: React.SFC<CardProps> = props => {
   return (
-    <div>
+    <div className="card">
       <span>{props.label}</span>
     </div>
   )

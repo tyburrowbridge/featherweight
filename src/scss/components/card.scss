@@ -1,9 +1,7 @@
-@import './settings/padding';
-@import './settings/colors';
-
 .card {
   padding: $pad-md;
   background-color: $grey--light;
+  border: 1px solid $grey;
 }
 
 .card-title {
