@@ -1646,6 +1646,19 @@ babylon@^6.18.0:
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
   integrity sha512-q/UEjfGJ2Cm3oKV71DJz9d25TPnq5rhBVL2Q4fA5wcC3jcrdn7+SssEybFIxwAvvP+YCsCYNKughoF33GxgycQ==
 
+baffle-react@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/baffle-react/-/baffle-react-0.0.2.tgz#110b6fe3fe8dc9cf0ad871515ce5793d7f9f1f26"
+  integrity sha512-iHm1Nx7XaKbBdYe82wY8tyzLf+6b4BLQErKckgKAPd+yOoL5tkLinX9pbnvRRKX37spMRitMtdCRM7UzwE43yg==
+  dependencies:
+    baffle "^0.3.6"
+    lodash "^4.17.4"
+
+baffle@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/baffle/-/baffle-0.3.6.tgz#989d8a6363a19e630da85a3480422883f0bda4d0"
+  integrity sha1-mJ2KY2OhnmMNqFo0gEIog/C9pNA=
+
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"

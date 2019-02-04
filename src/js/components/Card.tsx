@@ -6,7 +6,7 @@ interface CardProps {
 
 export const Card: React.SFC<CardProps> = props => {
   return (
-    <div className="card">
+    <div className="card" onClick={cardClick}>
       <span>{props.label}</span>
     </div>
   )
@@ -17,3 +17,5 @@ export default Card
 Card.defaultProps = {
   label: 'card has no label'
 }
+
+const cardClick = () => console.log('hehe, you clicked me')
