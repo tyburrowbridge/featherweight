@@ -11,11 +11,6 @@ export const Cards = () => {
 }
 export default Cards
 
-const cardLabel = () => {
-    CARDS_DATA.map(card => {card.label})
-}
-
-const listAllCards = () => {
-   CARDS_DATA.map(card => { <Card label={card.label}}) 
-}
+const cardLabel = CARDS_DATA.map(card => card.label)
+const listAllCards = CARDS_DATA.map(card => <Card label={card.label}) 
 
