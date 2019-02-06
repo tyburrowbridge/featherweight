@@ -1,10 +1,12 @@
 .card {
   padding: $pad--base;
-  background-color: $grey--light;
-  border: 1px solid $grey;
+  background-color: $bluescreen;
+  border: 1px solid $ash;
+  margin-top: -1px;
 }
 .card:hover {
-  background-color: $grey;
+  background-color: $ash--super-light;
+  color: $bluescreen;
 }
 
 .card-title {

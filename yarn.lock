@@ -817,6 +817,11 @@
     "@svgr/core" "^2.4.1"
     loader-utils "^1.1.0"
 
+"@types/animejs@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@types/animejs/-/animejs-2.0.1.tgz#f8088e8a0db301ffd4211bebe920d7896aab254c"
+  integrity sha512-IwmCpzWi8YMnk7cpIsMhnoM54Qc9tfE5MJcuv/71jSeeWS0QVw/aAcTyZatG9phUHW0S0AIqezO+uISqAWkZIg==
+
 "@types/jest@^23.3.10":
   version "23.3.10"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.10.tgz#4897974cc317bf99d4fe6af1efa15957fa9c94de"
@@ -1106,6 +1111,11 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
+
+animejs@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.0.1.tgz#8b808bad575e3b6106489d8b04b92bc4062166fe"
+  integrity sha512-7mMoBQScvA7s4zm3EVgnuXXrtOu6TJNAhU+Ajo7HsXYH0NwbuZIcRHMO65a9NyUlmAXz4VPxlK5cENNOQbCi8g==
 
 ansi-colors@^3.0.0:
   version "3.2.1"
@@ -1645,19 +1655,6 @@ babylon@^6.18.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
   integrity sha512-q/UEjfGJ2Cm3oKV71DJz9d25TPnq5rhBVL2Q4fA5wcC3jcrdn7+SssEybFIxwAvvP+YCsCYNKughoF33GxgycQ==
-
-baffle-react@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/baffle-react/-/baffle-react-0.0.2.tgz#110b6fe3fe8dc9cf0ad871515ce5793d7f9f1f26"
-  integrity sha512-iHm1Nx7XaKbBdYe82wY8tyzLf+6b4BLQErKckgKAPd+yOoL5tkLinX9pbnvRRKX37spMRitMtdCRM7UzwE43yg==
-  dependencies:
-    baffle "^0.3.6"
-    lodash "^4.17.4"
-
-baffle@^0.3.6:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/baffle/-/baffle-0.3.6.tgz#989d8a6363a19e630da85a3480422883f0bda4d0"
-  integrity sha1-mJ2KY2OhnmMNqFo0gEIog/C9pNA=
 
 balanced-match@^1.0.0:
   version "1.0.0"

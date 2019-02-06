@@ -8,16 +8,15 @@ import { Footer } from './js/components/Footer'
 import { CardColumn } from './js/components/CardColumn'
 
 // imports > styles
-import './App.scss'
-import './scss/views/_app.scss'
+// import './App.scss'
+import './scss/_base.scss'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <h1> Hello World. </h1>
         <CardColumn name="Backlog" />
-        <Footer />
       </div>
     )
   }

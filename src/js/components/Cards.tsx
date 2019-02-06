@@ -3,7 +3,11 @@ import { CARDS_DATA } from '../../data/CARDS_DATA'
 import { Card } from './Card'
 
 export const Cards = () => {
-  return <div>{getAllCards}</div>
+  return (
+    <div className="cards-wrapper" asdfdasfsdffadsfd>
+      {getAllCards}
+    </div>
+  )
 }
 export default Cards
 
