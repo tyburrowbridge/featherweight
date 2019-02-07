@@ -2,7 +2,7 @@
 @import './mixins/_declare-font-faces';
 
 // Normalize
-@import './config/normalize';
+// @import './config/normalize';
 
 // Fonts
 @import './config/font-faces';
@@ -14,16 +14,28 @@
 @import './settings/typography';
 
 // Components
-@import './components/cards';
+@import './components/card-column';
 @import './components/card';
 
 // Global Body Styles
-body {
+
+#root {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
   background-color: $bluescreen;
-  color: $white;
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  margin: $pad--fat;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: $white;
 }

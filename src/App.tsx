@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1> Hello World. </h1>
+        <h1> Shifty. </h1>
         <CardColumn name="Backlog" />
       </div>
     )

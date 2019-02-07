@@ -1,15 +1,22 @@
 .card {
-  padding: $pad--base;
-  background-color: $bluescreen;
-  border: 1px solid $ash;
-  margin-top: -1px;
+  padding: $pad--fat;
+  border-top: 1px solid $ash;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 .card:hover {
   background-color: $ash--super-light;
   color: $bluescreen;
 }
 
-.card-title {
+.card-assignee {
+  text-transform: uppercase;
+}
+
+.card-id {
+  align-self: end;
 }
 
 .card-description {

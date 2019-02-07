@@ -1,0 +1,10 @@
+.card-column-wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(370px, 370px));
+  grid-auto-rows: 370px;
+}
+
+.epic-story {
+  padding-bottom: $pad--fat;
+}
