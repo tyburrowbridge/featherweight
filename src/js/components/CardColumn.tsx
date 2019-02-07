@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from './Card'
 import { CARDS_DATA } from '../../data/CARDS_DATA'
-import { EPIC_DATA } from '../../data/CARDS_DATA'
+import { EpicHeader } from '../components/EpicHeader'
 
 interface CardColumnProps {
   name: string
@@ -10,9 +10,8 @@ interface CardColumnProps {
 export const CardColumn: React.SFC<CardColumnProps> = props => {
   return (
     <>
-      <h3>{epicLabel}</h3>
-      <span className="epic-story"> {epicStory}</span>
-      <div className="card-column-wrapper">{getAllCards}</div>
+      <EpicHeader />
+      <div className="card-column-wrapper">{cards}</div>
     </>
   )
 }
@@ -23,9 +22,6 @@ CardColumn.defaultProps = {
   name: 'Blank Column Name'
 }
 
-const getAllCards = CARDS_DATA.map(card => {
+const cards = CARDS_DATA.map(card => {
   return <Card id={card.id} label={card.label} assignee={card.assignee} />
 })
-
-const epicLabel = EPIC_DATA[0].label
-const epicStory = EPIC_DATA[0].story
