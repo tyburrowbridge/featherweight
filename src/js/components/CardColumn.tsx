@@ -1,27 +1,23 @@
 import React from 'react'
 import Card from './Card'
-import { CARDS_DATA } from '../../data/CARDS_DATA'
-import { EpicHeader } from '../components/EpicHeader'
 
 interface CardColumnProps {
   name: string
+  CARDS: any
 }
 
 export const CardColumn: React.SFC<CardColumnProps> = props => {
   return (
     <>
-      <EpicHeader />
-      <div className="card-column-wrapper">{cards}</div>
+      <div className="card-column-wrapper">
+        {props.CARDS.map((x: any) => (
+          <Card id={x.id} label={x.label} assignee={x.assignee} />
+        ))}
+      </div>
     </>
   )
 }
 
 export default CardColumn
 
-CardColumn.defaultProps = {
-  name: 'Blank Column Name'
-}
-
-const cards = CARDS_DATA.map(card => {
-  return <Card id={card.id} label={card.label} assignee={card.assignee} />
-})
+CardColumn.defaultProps = {}

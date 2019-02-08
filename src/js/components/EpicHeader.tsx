@@ -1,7 +1,10 @@
 import React from 'react'
-import { EPIC_DATA } from '../../data/CARDS_DATA'
+import { EPICS_DATA } from '../../data/EPICS_DATA'
 
 interface EpicHeaderProps {}
+
+const epicLabel = EPICS_DATA[0].label
+const epicStory = EPICS_DATA[0].story
 
 export const EpicHeader: React.SFC<EpicHeaderProps> = props => {
   return (
@@ -18,6 +21,3 @@ EpicHeader.defaultProps = {
   label: 'no epic defined',
   story: 'no user story defined'
 }
-
-const epicLabel = EPIC_DATA[0].label
-const epicStory = EPIC_DATA[0].story

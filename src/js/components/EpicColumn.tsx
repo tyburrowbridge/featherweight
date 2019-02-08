@@ -1,26 +1,17 @@
 import React from 'react'
-import { EPIC_DATA } from '../../data/CARDS_DATA'
+import { EPICS_DATA } from '../../data/EPICS_DATA'
 
-interface EpicColumnProps {
-  label: string
-  story: string
-}
+interface EpicColumnProps {}
 
 export const EpicColumn: React.SFC<EpicColumnProps> = props => {
   return (
     <>
-      <h3>{epicLabel}</h3>
-      <span className="epic-story"> {epicStory}</span>
+      <h3>{EPICS_DATA[0].label}</h3>
+      <span className="epic-story"> {EPICS_DATA[0].story}</span>
     </>
   )
 }
 
 export default EpicColumn
 
-EpicColumn.defaultProps = {
-  label: 'no epic defined',
-  story: 'no user story defined'
-}
-
-const epicLabel = EPIC_DATA[0].label
-const epicStory = EPIC_DATA[0].story
+EpicColumn.defaultProps = {}
