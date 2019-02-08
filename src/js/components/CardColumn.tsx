@@ -3,7 +3,7 @@ import Card from './Card'
 
 interface CardColumnProps {
   name: string
-  CARDS: any
+  CARDS: any // Cards array
 }
 
 export const CardColumn: React.SFC<CardColumnProps> = props => {
@@ -11,7 +11,7 @@ export const CardColumn: React.SFC<CardColumnProps> = props => {
     <>
       <div className="card-column-wrapper">
         {props.CARDS.map((x: any) => (
-          <Card id={x.id} label={x.label} assignee={x.assignee} />
+          <Card id={x.id} label={x.label} assignee={x.assignee} tags={x.tags} />
         ))}
       </div>
     </>
