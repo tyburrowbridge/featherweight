@@ -9,28 +9,35 @@ interface CardProps {
 }
 
 export const Card: React.SFC<CardProps> = props => {
+  const label = props.label
+  const id = props.id
+  const assignee = props.assignee
+  const tags = () => tags.map((x: any) => { <TagPill label={x}})  
+
   return (
     <div className="card" onClick={cardClick}>
-      <span className="card-id"> {props.id} </span>
-      <span className="card-assignee">-> {props.assignee} </span>
-      <h2>{props.label}</h2>
-      <span>{props.tags}</span>
+      <span className="card-id"> {id} </span>
+      <span className="card-assignee">-> {assignee} </span>
+      <h2>{label}</h2>
+      <TagPill label={tag} />
     </div>
   )
 }
 
 export default Card
 
+const cardClick = () => console.log('hehe, you clicked me')
+const cardTags = (tags: any) => {
+  // console.log(tags)
+  tags.map((tag: any) => {
+    console.log('card tag: ' + tag)
+    return <TagPill label={tag} />
+  })
+}
+
 Card.defaultProps = {
   id: 0,
   assignee: 'unassigned',
   label: 'card is undefined',
   tags: ['no tags found']
-}
-
-const cardClick = () => console.log('hehe, you clicked me')
-const cardTags = (tags: any) => {
-  tags.map((tag: any) => {
-    ;<TagPill label={tag} />
-  })
 }

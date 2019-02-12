@@ -11,7 +11,13 @@ export const CardColumn: React.SFC<CardColumnProps> = props => {
     <>
       <div className="card-column-wrapper">
         {props.CARDS.map((x: any) => (
-          <Card id={x.id} label={x.label} assignee={x.assignee} tags={x.tags} />
+          <Card
+            id={x.id}
+            label={x.label}
+            assignee={x.assignee}
+            tags={x.tags}
+            key={x.id}
+          />
         ))}
       </div>
     </>

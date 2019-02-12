@@ -5,7 +5,9 @@ interface TagPillProps {
 }
 
 export const TagPill: React.SFC<TagPillProps> = props => {
-  return <div className="tag-pill">{props.label}</div>
+  const label = props.label
+  console.log('tag pill: ' + label)
+  return <div className="tag-pill">{label}</div>
 }
 
 export default TagPill
