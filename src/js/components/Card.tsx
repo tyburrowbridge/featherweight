@@ -12,14 +12,16 @@ export const Card: React.SFC<CardProps> = props => {
   const label = props.label
   const id = props.id
   const assignee = props.assignee
-  const tags = () => tags.map((x: any) => { <TagPill label={x}})  
+  const tags = props.tags.map((tag: string) => (
+    <TagPill label={tag} key={tag} />
+  ))
 
   return (
     <div className="card" onClick={cardClick}>
       <span className="card-id"> {id} </span>
       <span className="card-assignee">-> {assignee} </span>
-      <h2>{label}</h2>
-      <TagPill label={tag} />
+      <h1 className="card-title">{label}</h1>
+      <div className="tag-pill-wrapper">{tags}</div>
     </div>
   )
 }
@@ -27,13 +29,6 @@ export const Card: React.SFC<CardProps> = props => {
 export default Card
 
 const cardClick = () => console.log('hehe, you clicked me')
-const cardTags = (tags: any) => {
-  // console.log(tags)
-  tags.map((tag: any) => {
-    console.log('card tag: ' + tag)
-    return <TagPill label={tag} />
-  })
-}
 
 Card.defaultProps = {
   id: 0,

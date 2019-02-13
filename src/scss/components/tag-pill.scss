@@ -1,8 +1,17 @@
+.tag-pill-wrapper {
+  display: flex;
+  width: 100%;
+  justify-self: end;
+  align-self: end;
+}
+
 .tag-pill {
-  background-color: $white;
-  color: $bluescreen;
+  // background-color: $white;
+  color: $white--40pct;
+  border-left: 1px solid $white--40pct;
   padding-left: $pad--thick;
   padding-right: $pad--thick;
   padding-top: $pad--base;
   padding-bottom: $pad--base;
+  margin-left: $pad--thin;
 }

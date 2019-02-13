@@ -1,5 +1,6 @@
 // Padding
-$pad--base: $base * 2;
-$pad--thick: $base;
+$pad--base: $base;
+$pad--thin: $base/2;
+$pad--thick: $base * 2;
 $pad--fat: $base * 4;
 $pad--super-fat: $base * 16;

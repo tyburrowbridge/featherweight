@@ -27,6 +27,7 @@ $peach--dark: darken($peach, 60%);
 // Whites
 // $white: rgba(210, 210, 210, 1);
 $white: $ash--super-light;
+$white--40pct: rgba($white, 0.4);
 
 // Seafoam (59,198,196)
 $seafoam: rgba(59, 198, 196, 1);

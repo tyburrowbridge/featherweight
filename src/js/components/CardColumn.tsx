@@ -8,19 +8,17 @@ interface CardColumnProps {
 
 export const CardColumn: React.SFC<CardColumnProps> = props => {
   return (
-    <>
-      <div className="card-column-wrapper">
-        {props.CARDS.map((x: any) => (
-          <Card
-            id={x.id}
-            label={x.label}
-            assignee={x.assignee}
-            tags={x.tags}
-            key={x.id}
-          />
-        ))}
-      </div>
-    </>
+    <div className="card-column-wrapper">
+      {props.CARDS.map((x: any) => (
+        <Card
+          id={x.id}
+          label={x.label}
+          assignee={x.assignee}
+          tags={x.tags}
+          key={x.id}
+        />
+      ))}
+    </div>
   )
 }
 

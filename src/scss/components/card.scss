@@ -11,8 +11,12 @@
   color: $bluescreen;
 }
 
+.card-title {
+}
+
 .card-assignee {
   text-transform: uppercase;
+  color: $white--40pct;
 }
 
 .card-id {
