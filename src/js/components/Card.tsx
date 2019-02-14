@@ -1,3 +1,10 @@
+// TODO: add states --> [active, archived]
+// TODO: add column []
+// TODO:
+// TODO:
+// TODO:
+// TODO:
+
 import React from 'react'
 import TagPill from './TagPill'
 

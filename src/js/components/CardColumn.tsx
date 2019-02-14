@@ -24,4 +24,6 @@ export const CardColumn: React.SFC<CardColumnProps> = props => {
 
 export default CardColumn
 
-CardColumn.defaultProps = {}
+CardColumn.defaultProps = {
+  name: 'New Column'
+}
