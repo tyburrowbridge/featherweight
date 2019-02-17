@@ -17,9 +17,11 @@
 @import './components/card-column';
 @import './components/card';
 @import './components/tag-pill';
+@import './components/epic-header';
+@import './components/epic-column';
+@import './components/tiny-square';
 
 // Global Body Styles
-
 #root {
   display: flex;
   padding: 0;
