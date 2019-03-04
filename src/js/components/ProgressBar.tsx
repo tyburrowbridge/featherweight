@@ -12,7 +12,11 @@ const percent = (x: number, y: number) => {
 export const ProgressBar: React.SFC<ProgressBarProps> = props => {
   const complete = props.complete
   const total = props.total
-  return <div>{complete + ' / ' + total}</div>
+  return (
+    <div className="progress-bar">
+      <div>{complete + ' / ' + total}</div>
+    </div>
+  )
 }
 export default ProgressBar
 

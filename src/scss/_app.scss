@@ -1,0 +1,24 @@
+// Global Body Styles
+
+#root {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $bluescreen;
+}
+
+.app {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding-left: $pad--super-fat;
+  padding-right: $pad--super-fat;
+}
+
+body {
+  color: $white;
+  margin: 0;
+}

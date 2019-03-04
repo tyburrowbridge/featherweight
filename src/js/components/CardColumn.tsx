@@ -3,12 +3,13 @@ import Card from './Card'
 
 interface CardColumnProps {
   name: string
-  CARDS: any // Cards array
+  CARDS: any
 }
 
 export const CardColumn: React.SFC<CardColumnProps> = props => {
   return (
     <div className="card-column-wrapper">
+      <div className="card-column__title"> {name}</div>
       {props.CARDS.map((x: any, index: number) => (
         <Card
           key={index}
@@ -21,8 +22,6 @@ export const CardColumn: React.SFC<CardColumnProps> = props => {
     </div>
   )
 }
-
-export default CardColumn
 
 CardColumn.defaultProps = {
   name: 'New Column'

@@ -1,9 +1,6 @@
 // Mixins
 @import './mixins/_declare-font-faces';
 
-// Normalize
-// @import './config/normalize';
-
 // Fonts
 @import './config/font-faces';
 
@@ -21,24 +18,5 @@
 @import './components/epic-column';
 @import './components/tiny-square';
 
-// Global Body Styles
-#root {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  background-color: $bluescreen;
-}
-
-.App {
-  display: grid;
-  margin: $pad--fat;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  color: $white;
-}
+// App
+@import './app';

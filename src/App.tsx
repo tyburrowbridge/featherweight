@@ -6,7 +6,7 @@ import { useState } from 'react'
 // imports > components
 import { Header } from './js/components/Header'
 import { Footer } from './js/components/Footer'
-import { EpicColumn } from './js/components/EpicColumn'
+import { EpicFullView } from './js/views/EpicFullView'
 import { DetectKeyPress } from './js/utils/DetectKeyPress'
 import { ProgressBar } from './js/components/ProgressBar'
 
@@ -16,10 +16,10 @@ import './scss/_base.scss'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="app">
         <DetectKeyPress targetKey={72} />
         <ProgressBar complete={2} total={10} />
-        <EpicColumn />
+        <EpicFullView />
       </div>
     )
   }

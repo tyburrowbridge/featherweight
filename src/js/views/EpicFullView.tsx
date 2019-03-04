@@ -1,12 +1,12 @@
 import React from 'react'
 import { EPICS_DATA } from '../../data/EPICS_DATA'
 import { CARDS_DATA } from '../../data/CARDS_DATA'
-import { EpicHeader } from './EpicHeader'
-import { CardColumn } from './CardColumn'
+import { EpicHeader } from '../components/EpicHeader'
+import { CardColumn } from '../components/CardColumn'
 
-interface EpicColumnProps {}
+interface EpicFullViewProps {}
 
-export const EpicColumn: React.SFC<EpicColumnProps> = props => {
+export const EpicFullView: React.SFC<EpicFullViewProps> = props => {
   return (
     <div>
       <EpicHeader />
@@ -17,6 +17,4 @@ export const EpicColumn: React.SFC<EpicColumnProps> = props => {
   )
 }
 
-export default EpicColumn
-
-EpicColumn.defaultProps = {}
+EpicFullView.defaultProps = {}
