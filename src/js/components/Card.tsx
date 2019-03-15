@@ -10,12 +10,14 @@ interface CardProps {
   assignee?: string
   label?: string
   tags: any
+  stage: string
 }
 
 export const Card: React.SFC<CardProps> = props => {
   const cardClick = () => console.log('hehe, you clicked me')
   const label = props.label
   const id = props.id
+  const stage = props.stage
   const assignee = props.assignee || ''
   const tags = props.tags.map((tag: string) => (
     <TagPill label={tag} key={tag} />
@@ -23,7 +25,10 @@ export const Card: React.SFC<CardProps> = props => {
 
   return (
     <div className="card" onClick={cardClick}>
-      <span className="card-id"> {id} </span>
+      <span className="card-id">
+        {' '}
+        {id} | {stage}
+      </span>
       <span className="card-assignee">
         <UserInitials fullName={assignee} />{' '}
       </span>

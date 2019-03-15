@@ -1,4 +1,18 @@
-.card-column-wrapper {
+.card-columns__wrapper {
+  display: grid;
+  grid-gap: $pad--fat;
+  grid-template-columns: 370px 370px 370px;
+}
+
+.card-column {
+  width: 25vw;
+}
+
+.card-column__title {
+  padding-bottom: $pad--fat;
+}
+
+.card-column__card-holder {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(370px, 370px));

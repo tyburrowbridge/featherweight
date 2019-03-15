@@ -1,20 +1,32 @@
 import React from 'react'
 import { EPICS_DATA } from '../../data/EPICS_DATA'
-import { CARDS_DATA } from '../../data/CARDS_DATA'
+//import { CARDS_DATA } from '../../data/CARDS_DATA'
 import { EpicHeader } from '../components/EpicHeader'
 import { CardColumn } from '../components/CardColumn'
+import data from '../../data/CARDS.json'
 
-interface EpicFullViewProps {}
+interface CardObj {
+  // id: number
+  // title: string
+  // creator: string
+  assignee: string
+  // dateCreated: string
+  // tags: string
+  // column: string
+}
 
-export const EpicFullView: React.SFC<EpicFullViewProps> = props => {
+export const EpicFullView = () => {
+  const card: CardObj = data as any
+
+  console.log('card: ' + data.assignees)
+
   return (
     <div>
       <EpicHeader />
-      <CardColumn name="Backlog" CARDS={CARDS_DATA} />
-      <h3>{EPICS_DATA[0].label}</h3>
-      <span className="epic-story"> {EPICS_DATA[0].story}</span>
     </div>
   )
 }
 
 EpicFullView.defaultProps = {}
+
+// <CardColumn name="Backlog" cards={CARDS_DATA} />

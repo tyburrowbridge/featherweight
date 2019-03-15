@@ -6,9 +6,8 @@ interface EpicHeaderProps {}
 const epicLabel = EPICS_DATA[0].label
 const epicStory = EPICS_DATA[0].story
 
-export const tinySquare = () => <div className="tiny-square">hi.</div>
-
-export const EpicHeader: React.SFC<EpicHeaderProps> = props => {
+export const EpicHeader: React.FC<EpicHeaderProps> = props => {
+  const tinySquare = <div className="tiny-square">hi.</div>
   return (
     <div className="epic-header-wrapper">
       {tinySquare}

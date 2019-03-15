@@ -3,25 +3,36 @@ import Card from './Card'
 
 interface CardColumnProps {
   name: string
-  CARDS: any
+  cards: any
 }
 
+const getCardData = () => {}
+
+const parseCardsByStatus = () => {}
+
 export const CardColumn: React.SFC<CardColumnProps> = props => {
-  return (
-    <div className="card-column-wrapper">
-      <div className="card-column__title"> {name}</div>
-      {props.CARDS.map((x: any, index: number) => (
-        <Card
-          key={index}
-          id={x.id}
-          label={x.label}
-          assignee={x.assignee}
-          tags={x.tags}
-        />
-      ))}
-    </div>
-  )
+  return <div> card column will go here </div>
 }
+
+// export const CardColumn: React.SFC<CardColumnProps> = props => {
+//   return (
+//     <div className="card-column">
+//       <div className="card-column__title"> {props.name} </div>
+//       <div className="card-column__card-holder">
+//         {props.cards.map((x: any, index: number) => (
+//           <Card
+//             key={index}
+//             id={x.id}
+//             label={x.label}
+//             assignee={x.assignee}
+//             tags={x.tags}
+//             stage={x.stage}
+//           />
+//         ))}
+//       </div>
+//     </div>
+//   )
+// }
 
 CardColumn.defaultProps = {
   name: 'New Column'
