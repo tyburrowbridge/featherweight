@@ -1,10 +1,67 @@
 {
-  "assignees": [
+  "cards": [
     {
-      "assignee": "luke grecki"
+      "id": 1,
+      "title": "get JSON data actually working",
+      "creator": "mister pickles",
+      "assignee": "ty burrowbridge",
+      "dateCreated": "10-11-12",
+      "tags": ["important", "ux", "ui"],
+      "stage": "working"
     },
     {
-      "assignee": "ty burrowbridge"
+      "id": 2,
+      "title": "make the epics change color",
+      "creator": "mister pickles",
+      "assignee": "luke grecki",
+      "dateCreated": "10-11-10",
+      "tags": ["important", "ux", "ui"],
+      "stage": "ready"
+    },
+    {
+      "id": 3,
+      "title": "yip yo here we go!",
+      "creator": "mister pickles",
+      "assignee": "yvan themathcreep",
+      "dateCreated": "10-10-10",
+      "tags": ["important", "ux", "ui"],
+      "stage": "done"
+    },
+    {
+      "id": 4,
+      "title": "yip yo here we go!",
+      "creator": "mister pickles",
+      "assignee": "yvan themathcreep",
+      "dateCreated": "10-10-10",
+      "tags": ["important", "ux", "ui"],
+      "stage": "done"
+    },
+    {
+      "id": 5,
+      "title": "source horrible photos of foz",
+      "creator": "mister pickles",
+      "assignee": "yvan themathcreep",
+      "dateCreated": "10-10-10",
+      "tags": ["important", "ux", "ui"],
+      "stage": "backlog"
+    },
+    {
+      "id": 6,
+      "title": "get keyboard shortcuts firing!",
+      "creator": "mister pickles",
+      "assignee": "yvan themathcreep",
+      "dateCreated": "10-10-10",
+      "tags": ["important", "ux", "ui"],
+      "stage": "backlog"
+    },
+    {
+      "id": 7,
+      "title": "high five a stranger",
+      "creator": "mister pickles",
+      "assignee": "yvan themathcreep",
+      "dateCreated": "10-10-10",
+      "tags": ["important", "ux", "ui"],
+      "stage": "backlog"
     }
   ]
 }

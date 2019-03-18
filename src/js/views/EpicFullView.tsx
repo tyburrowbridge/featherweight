@@ -1,28 +1,26 @@
 import React from 'react'
 import { EPICS_DATA } from '../../data/EPICS_DATA'
-//import { CARDS_DATA } from '../../data/CARDS_DATA'
 import { EpicHeader } from '../components/EpicHeader'
 import { CardColumn } from '../components/CardColumn'
-import data from '../../data/CARDS.json'
 
-interface CardObj {
-  // id: number
-  // title: string
-  // creator: string
-  assignee: string
-  // dateCreated: string
-  // tags: string
-  // column: string
-}
+const columnsArr = [
+  { name: 'backlog' },
+  { name: 'working' },
+  { name: 'ready' },
+  { name: 'done' }
+]
 
 export const EpicFullView = () => {
-  const card: CardObj = data as any
-
-  console.log('card: ' + data.assignees)
-
   return (
     <div>
-      <EpicHeader />
+      <div className="epic-columns__wrapper">
+        <div className="epic-header">
+          <EpicHeader />
+        </div>
+        {columnsArr.map((column: any, index: number) => {
+          return <CardColumn title={column.name} />
+        })}
+      </div>
     </div>
   )
 }
@@ -30,3 +28,13 @@ export const EpicFullView = () => {
 EpicFullView.defaultProps = {}
 
 // <CardColumn name="Backlog" cards={CARDS_DATA} />
+//
+// const addColumnsToView = () => {
+//   return condition1
+//     ? value1
+//     : condition2
+//     ? value2
+//     : condition3
+//     ? value3
+//     : value4
+// }

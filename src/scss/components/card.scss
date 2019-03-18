@@ -1,6 +1,8 @@
 .card {
-  padding: $pad--fat;
+  padding: $pad--super-fat;
   border-top: 1px solid $ash;
+  margin: $pad--base;
+  //border-bottom: 1px solid $bluescreen;
 
   display: flex;
   flex-direction: column;

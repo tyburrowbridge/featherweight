@@ -2,6 +2,12 @@
   padding: $pad--fat $pad--thin;
 }
 
+.epic-columns__wrapper {
+  //  padding: $pad--fat;
+  display: flex;
+  flex-direction: row;
+}
+
 .tiny-square {
   width: 10px;
   height: 10px;

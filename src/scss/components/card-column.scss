@@ -1,11 +1,9 @@
 .card-columns__wrapper {
-  display: grid;
-  grid-gap: $pad--fat;
-  grid-template-columns: 370px 370px 370px;
 }
 
 .card-column {
-  width: 25vw;
+  display: flex;
+  justify-items: start;
 }
 
 .card-column__title {
@@ -14,11 +12,24 @@
 
 .card-column__card-holder {
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(370px, 370px));
+  grid-gap: 0;
+  grid-template-columns: repeat(auto-fill, minmax(25vw, 25vw));
   grid-auto-rows: 370px;
 }
 
+.card-column__backlog {
+  background-color: darken($bluescreen, 5%);
+}
+
+.card-column__working {
+  background-color: darken($bluescreen, 10%);
+}
+.card-column__ready {
+  background-color: darken($bluescreen, 15%);
+}
+.card-column__done {
+  background-color: darken($bluescreen, 20%);
+}
 .epic-story {
   padding-bottom: $pad--fat;
 }

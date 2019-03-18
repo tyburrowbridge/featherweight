@@ -1,15 +1,4 @@
-.epic-header-wrapper {
-  padding: $pad--fat $pad--thin;
-}
-
-.tiny-square-wrapper {
-  display: flex;
-  width: 300px;
-}
-
-.tiny-square {
-  margin: 2px;
-  width: 5px;
-  height: 5px;
-  border-top: 1px solid $white;
+.epic-header__wrapper {
+  padding: $pad--super-fat;
+  width: 25vw;
 }

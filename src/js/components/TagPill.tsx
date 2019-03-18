@@ -9,3 +9,5 @@ export const TagPill: React.SFC<TagPillProps> = props => {
 }
 
 export default TagPill
+
+//  return <div className="tag-pill">{props.label}</div>

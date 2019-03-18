@@ -18,7 +18,6 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <ProgressBar complete={2} total={10} />
         <EpicFullView />
       </div>
     )
