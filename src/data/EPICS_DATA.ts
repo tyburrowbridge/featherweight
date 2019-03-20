@@ -1,7 +1,7 @@
 export const EPICS_DATA = [
   {
-    label: 'An hyperlight kanban',
+    label: 'The featherweight kanban',
     story:
-      'As a user I want things to be super crispy, because it gives ultimate joy to life.'
+      'As a small team we want a super light way manage our task and build working product.'
   }
 ]

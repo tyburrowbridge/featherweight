@@ -18,7 +18,7 @@ export const EpicFullView = () => {
           <EpicHeader />
         </div>
         {columnsArr.map((column: any, index: number) => {
-          return <CardColumn title={column.name} />
+          return <CardColumn key={index} title={column.name} />
         })}
       </div>
     </div>

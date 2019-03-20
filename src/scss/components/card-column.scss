@@ -19,6 +19,9 @@
 
 .card-column__backlog {
   background-color: darken($bluescreen, 5%);
+  & > div {
+    opacity: 0.4;
+  }
 }
 
 .card-column__working {
@@ -29,6 +32,9 @@
 }
 .card-column__done {
   background-color: darken($bluescreen, 20%);
+  & > div {
+    opacity: 0.4;
+  }
 }
 .epic-story {
   padding-bottom: $pad--fat;

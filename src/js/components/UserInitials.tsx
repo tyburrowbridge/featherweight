@@ -18,11 +18,8 @@ export const UserInitials: React.SFC<UserInitialsProps> = props => {
   const lname = lastName(fullName)
   const firstNameInitial = getInitial(fname)
   const lastNameInitial = getInitial(lname)
-  console.log(fullName)
-  console.log(fname)
-  console.log(lname)
 
-  return <div>{arrow + firstNameInitial + lastNameInitial}</div>
+  return <div>{firstNameInitial + lastNameInitial}</div>
 }
 
 export default UserInitials
@@ -30,3 +27,5 @@ export default UserInitials
 UserInitials.defaultProps = {
   fullName: 'Ghost User'
 }
+
+// return <div>{arrow + firstNameInitial + lastNameInitial}</div> // add a fira arrow to initials

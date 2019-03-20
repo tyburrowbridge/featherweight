@@ -1,13 +1,5 @@
-.tag-pill-wrapper {
-  display: flex;
-  width: 100%;
-  justify-self: end;
-  align-self: end;
-}
-
 .tag-pill {
   color: $white--40pct;
   padding-right: $pad--fat;
-  padding-top: $pad--base;
   padding-bottom: $pad--base;
 }
