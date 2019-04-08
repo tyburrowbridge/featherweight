@@ -6,21 +6,26 @@ import { useState, useEffect } from 'react'
 
 interface DetectKeyPressProps {
   targetKey: number
+  actionType: string
+  mode: any
 }
 
 export const DetectKeyPress: React.SFC<DetectKeyPressProps> = props => {
   const targetKey = props.targetKey
+  const actionType = props.actionType
+  const mode = props.mode
 
   // State for keeping track of whether key is pressed
   const [keyPressed, setKeyPressed] = useState(false)
 
   // If pressed key is our target key then set to true
-  const downHandler = (key: any) => {
+  const downHandler = (key: any, actionType: string) => {
     if (key.keyCode === targetKey) {
-      setKeyPressed(true)
-      // console.log('*** targetkey was pressed ***')
+      dispatch({ type: 'NORMAL_MODE' })
+      console.log(`targetKey fired : ${targetKey}`)
+      console.log(`fire action     : ${actionType}`)
+      console.log(`mode            : ${mode}`)
     }
-    //console.log('key ==> ' + key.keyCode)
   }
 
   // If released key is our target key then set to false
