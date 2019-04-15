@@ -6,33 +6,25 @@ import { useState, useEffect } from 'react'
 
 interface DetectKeyPressProps {
   targetKey: number
-  actionType: string
-  mode: any
+  mode: string
+  setMode: () => {}
 }
 
-export const DetectKeyPress: React.SFC<DetectKeyPressProps> = props => {
-  const targetKey = props.targetKey
-  const actionType = props.actionType
-  const mode = props.mode
+export const DetectKeyPress:<DetectKeyPressProps> = (target: number, mode: string: setMode: any) => {
+  console.log(`targetKey    : ${targetKey}`)
 
   // State for keeping track of whether key is pressed
   const [keyPressed, setKeyPressed] = useState(false)
 
   // If pressed key is our target key then set to true
-  const downHandler = (key: any, actionType: string) => {
-    if (key.keyCode === targetKey) {
-      dispatch({ type: 'NORMAL_MODE' })
-      console.log(`targetKey fired : ${targetKey}`)
-      console.log(`fire action     : ${actionType}`)
-      console.log(`mode            : ${mode}`)
-    }
+  const downHandler = (key: any) => {
+    console.log(`targetKey hit: ${targetKey}`)
+    key.keyCode === targetKey ? setMode() : null
   }
 
   // If released key is our target key then set to false
   const upHandler = (key: any) => {
-    if (key.keyCode === targetKey) {
-      setKeyPressed(false)
-    }
+    key.keyCode === targetKey ? setKeyPressed(false) : null
   }
 
   // Add event listeners
@@ -46,13 +38,6 @@ export const DetectKeyPress: React.SFC<DetectKeyPressProps> = props => {
       window.removeEventListener('keyup', upHandler)
     }
   }, []) // Empty array ensures that effect is only run on mount
-
-  return (
-    <div>
-      <h3> detecting key: {props.targetKey} </h3>
-      <div />
-    </div>
-  )
 }
 
 export default DetectKeyPress

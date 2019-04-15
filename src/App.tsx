@@ -4,53 +4,56 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 
 // components
-import { Header } from './js/components/Header'
-import { Footer } from './js/components/Footer'
 import { EpicFullView } from './js/views/EpicFullView'
-import { ProgressBar } from './js/components/ProgressBar'
 import { DetectKeyPress } from './js/utils/DetectKeyPress'
+import { ModeBar } from './js/components/ModeBar'
 
 // styles
 import './scss/_base.scss'
 
 export interface AppProps {}
 
-interface AppStateProps extends AppProps {
+interface AppStateProps {
   mode: string
 }
 
-interface AppDispatchProps extends AppProps {
-  switchMode: (action: any) => void
+interface AppDispatchProps {
+  setMode: () => {}
 }
 
-class App extends Component<AppProps> {
+class App extends Component<AppDispatchProps> {
   render() {
     return (
       <div className="app__wrapper">
         <EpicFullView />
+        <ModeBar currentMode="xxx" />
         <DetectKeyPress
           targetKey={78}
-          actionType={'NORMAL_MODE'}
-          mode={this.props.normalMode}
-        />
-        <DetectKeyPress
-          targetKey={73}
-          actionType={'INSERT_MODE'}
-          mode={insertMode}
+          setMode={this.props.setMode}
+          mode={Mode.normal}
         />
       </div>
     )
   }
 }
 
+export enum Mode {
+  normal = 'normal-mode',
+  visual = 'visual-mode',
+  insert = 'insert-mode'
+}
+
+const normalMode = () => ({ type: Mode.normal })
+const visualMode = () => ({ type: Mode.visual })
+const insertMode = () => ({ type: Mode.insert })
+
 const mapStateToProps = (state: any) => {
   return { mode: state.mode }
 }
 
-const mapDispatchToProps = (dispatch: any) => {
+const mapDispatchToProps = (dispatch: any, ownProps: any) => {
   return {
-    normalMode: () => dispatch({ type: 'NORMAL_MODE' }),
-    insertMode: () => dispatch({ type: 'INSERT_MODE' })
+    //setMode: () => dispatch(normalMode)
   }
 }
 

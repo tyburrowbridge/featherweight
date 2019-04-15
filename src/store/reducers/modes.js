@@ -1,10 +1,12 @@
 const initialState = {
-  age: 21
+  mode: 'NORMAL_MODE'
 }
 
-export const reducer = (state = initialState, action: any) => {
+export const modesReducer = (state = initialState, action) => {
   // make a new state out of the current state
   const newState = { ...state }
+  console.log('called reducer')
+  console.log('mode: ' + newState.mode)
 
   // action template
   if (action.type === 'NORMAL_MODE') {
@@ -20,4 +22,4 @@ export const reducer = (state = initialState, action: any) => {
   return newState
 }
 
-export default reducer
+export default modesReducer
