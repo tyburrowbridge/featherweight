@@ -5,64 +5,24 @@ import { connect } from 'react-redux'
 
 // components
 import { EpicFullView } from './js/views/EpicFullView'
-import { DetectKeyPress } from './js/utils/DetectKeyPress'
+import { SetKeyModes } from './js/utils/KeyModes'
 import { ModeBar } from './js/components/ModeBar'
 
 // styles
 import './scss/_base.scss'
 
-export interface AppProps {}
-
-interface AppStateProps {
-  mode: string
-}
-
-interface AppDispatchProps {
-  setMode: () => {}
-}
-
-class App extends Component<AppDispatchProps> {
+class App extends Component {
   render() {
     return (
       <div className="app__wrapper">
         <EpicFullView />
-        <ModeBar currentMode="xxx" />
-        <DetectKeyPress
-          targetKey={78}
-          setMode={this.props.setMode}
-          mode={Mode.normal}
-        />
+        <SetKeyModes />
+        <ModeBar currentMode="NORMAL_MODE" />
       </div>
     )
   }
 }
 
-export enum Mode {
-  normal = 'normal-mode',
-  visual = 'visual-mode',
-  insert = 'insert-mode'
-}
+export default App
 
-const normalMode = () => ({ type: Mode.normal })
-const visualMode = () => ({ type: Mode.visual })
-const insertMode = () => ({ type: Mode.insert })
-
-const mapStateToProps = (state: any) => {
-  return { mode: state.mode }
-}
-
-const mapDispatchToProps = (dispatch: any, ownProps: any) => {
-  return {
-    //setMode: () => dispatch(normalMode)
-  }
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App)
-
-//<EpicFullView />
-// import { DetectKeyPress } from './js/utils/DetectKeyPress'
-// <DetectKeyPress targetKey={72} />
 // import { WavyLine } from './js/components/WavyLine'
