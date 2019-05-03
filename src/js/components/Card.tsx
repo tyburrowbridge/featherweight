@@ -3,7 +3,9 @@
 import React from 'react'
 import { TagPill } from './TagPill'
 import { UserInitials } from './UserInitials'
-import DiagonalLine from '../components/DiagonalLine'
+import { DiagonalLine } from '../components/DiagonalLine'
+import { WavyLine } from '../components/WavyLine'
+import { COLUMNS } from '../../data/COLUMNS'
 
 interface CardProps {
   id: number
@@ -15,23 +17,16 @@ interface CardProps {
   column: string
 }
 
-const addTagsToCard = (tags: any) =>
-  tags.map((tag: any, index: number) => {
-    return <TagPill label={tag} key={index} />
-  })
-
-const applyDoneStyleToCard = (x: string) => {
-  const done =
-    x === 'done' ? `.card__diagonal-line--show` : `card__diagonal-line--hide`
-  return done
+const working = COLUMNS[1]
+const showWavyLine = (column: string) => {
+  column === working ? 'wavy-line--show' : 'wavy-line--hide'
 }
-
-const handleCardClick = () => console.log('hehe, you clicked a card')
 
 export const Card: React.FC<CardProps> = props => {
   return (
     <div>
       <div className="card" onClick={handleCardClick}>
+        {}
         <div className="card-id">{props.id}</div>
         <div className="card-assignee">
           <UserInitials fullName={props.assignee} />
@@ -53,3 +48,16 @@ export const Card: React.FC<CardProps> = props => {
   )
 }
 export default Card
+
+const handleCardClick = () => console.log('hehe, you clicked a card')
+
+const addTagsToCard = (tags: any) =>
+  tags.map((tag: any, index: number) => {
+    return <TagPill label={tag} key={index} />
+  })
+
+const applyDoneStyleToCard = (x: string) => {
+  const done =
+    x === 'done' ? `.card__diagonal-line--show` : `card__diagonal-line--hide`
+  return done
+}

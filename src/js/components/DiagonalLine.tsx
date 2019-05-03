@@ -4,7 +4,7 @@ interface DiagonalLineProps {
   color: string
 }
 
-const DiagonalLine: React.SFC<DiagonalLineProps> = props => {
+export const DiagonalLine: React.FC<DiagonalLineProps> = props => {
   const width = '100%'
   const height = '100%'
   const stroke = props.color
@@ -24,5 +24,3 @@ const DiagonalLine: React.SFC<DiagonalLineProps> = props => {
     </div>
   )
 }
-
-export default DiagonalLine

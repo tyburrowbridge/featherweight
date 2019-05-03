@@ -7,7 +7,9 @@
       "assignee": "ty burrowbridge",
       "dateCreated": "10-11-12",
       "tags": ["important", "ux", "ui"],
-      "stage": "working"
+      "column": "working",
+      "epicId": 19382,
+      "projectId": 100
     },
     {
       "id": 2,
@@ -16,7 +18,9 @@
       "assignee": "luke grecki",
       "dateCreated": "10-11-10",
       "tags": ["important", "ux", "ui"],
-      "stage": "ready"
+      "column": "ready",
+      "epicId": 19382,
+      "projectId": 100
     },
     {
       "id": 3,
@@ -25,7 +29,9 @@
       "assignee": "yvan themathcreep",
       "dateCreated": "10-10-10",
       "tags": ["important", "ux", "ui"],
-      "stage": "done"
+      "column": "done",
+      "epicId": 19382,
+      "projectId": 100
     },
     {
       "id": 4,
@@ -34,7 +40,9 @@
       "assignee": "yvan themathcreep",
       "dateCreated": "10-10-10",
       "tags": ["important", "ux", "ui"],
-      "stage": "done"
+      "column": "done",
+      "epicId": 19382,
+      "projectId": 100
     },
     {
       "id": 5,
@@ -43,7 +51,9 @@
       "assignee": "yvan themathcreep",
       "dateCreated": "10-10-10",
       "tags": ["important", "ux", "ui"],
-      "stage": "backlog"
+      "column": "backlog",
+      "epicId": 19382,
+      "projectId": 100
     },
     {
       "id": 6,
@@ -52,7 +62,9 @@
       "assignee": "yvan themathcreep",
       "dateCreated": "10-10-10",
       "tags": ["important", "ux", "ui"],
-      "stage": "backlog"
+      "column": "backlog",
+      "epicId": 19382,
+      "projectId": 100
     },
     {
       "id": 7,
@@ -61,7 +73,9 @@
       "assignee": "yvan themathcreep",
       "dateCreated": "10-10-10",
       "tags": ["important", "ux", "ui"],
-      "stage": "backlog"
+      "column": "backlog",
+      "epicId": 19382,
+      "projectId": 100
     }
   ]
 }

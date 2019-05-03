@@ -9,7 +9,7 @@ interface CardObj {
   assignee: string
   creator: string
   dateCreated: string
-  stage: string
+  column: string
   tags: any
 }
 
@@ -21,7 +21,7 @@ interface CardColumnProps {
 
 const cardColumn = (column: string) =>
   cards
-    .filter((card: CardObj) => card.stage === column)
+    .filter((card: CardObj) => card.column === column)
     .map((card: CardObj, index: number) => (
       <Card
         key={index}
@@ -35,7 +35,7 @@ const cardColumn = (column: string) =>
       />
     ))
 
-export const CardColumn: React.SFC<CardColumnProps> = props => {
+export const CardColumn: React.FC<CardColumnProps> = props => {
   return (
     <div className="card-column">
       <div className={`card-column__${props.title}`}>

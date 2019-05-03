@@ -11,7 +11,6 @@ export const EpicView = () => {
         <EpicHeader />
       </div>
       {COLUMNS.map((column: any, index: number) => {
-        console.log(column)
         return <CardColumn key={index} title={column} />
       })}
     </div>
