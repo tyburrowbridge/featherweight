@@ -9,16 +9,20 @@ interface ModeBarProps {
 }
 
 export const ModeBar: React.FC<ModeBarProps> = ({ currentMode }) => {
-  const [mode, setMode] = useState('')
+  const [mode, setMode] = useState(NORMAL_MODE)
   const updateMode = (mode: string) => {
-    mode === NORMAL_MODE ? setMode('mode-bar__wrapper--normal') : null
-    mode === VISUAL_MODE ? setMode('mode-bar__wrapper--visual') : null
-    mode === INSERT_MODE ? setMode('mode-bar__wrapper--insert') : null
+    mode === NORMAL_MODE
+      ? setMode('mode-bar__wrapper--normal')
+      : mode === VISUAL_MODE
+      ? setMode('mode-bar__wrapper--visual')
+      : mode === INSERT_MODE
+      ? setMode('mode-bar__wrapper--insert')
+      : 'undefined'
   }
 
   return (
     <div>
-      <div className={updateMode('')}>
+      <div className="">
         <h3> there is the modebar </h3>
         <button onClick={() => updateMode(NORMAL_MODE)}>Normal Mode</button>
         <button onClick={() => updateMode(VISUAL_MODE)}>Visual Mode</button>

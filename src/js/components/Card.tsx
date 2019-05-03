@@ -12,7 +12,7 @@ interface CardProps {
   assignee: string
   dateCreated: string
   tags: any
-  stage: string
+  column: string
 }
 
 const addTagsToCard = (tags: any) =>
@@ -28,7 +28,7 @@ const applyDoneStyleToCard = (x: string) => {
 
 const handleCardClick = () => console.log('hehe, you clicked a card')
 
-export const Card: React.SFC<CardProps> = props => {
+export const Card: React.FC<CardProps> = props => {
   return (
     <div>
       <div className="card" onClick={handleCardClick}>
@@ -43,7 +43,7 @@ export const Card: React.SFC<CardProps> = props => {
         </div>
         <div
           className={`card__diagonal-line-wrapper ${applyDoneStyleToCard(
-            props.stage
+            props.column
           )}`}
         >
           <DiagonalLine color="#ffeedd" />

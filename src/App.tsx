@@ -4,9 +4,10 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 
 // components
-import { EpicFullView } from './js/views/EpicFullView'
+import { EpicView } from './js/views/EpicView'
 import { SetKeyModes } from './js/utils/KeyModes'
 import { ModeBar } from './js/components/ModeBar'
+import { Components } from './js/views/Components'
 
 // styles
 import './scss/_base.scss'
@@ -15,9 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className="app__wrapper">
-        <EpicFullView />
-        <SetKeyModes />
-        <ModeBar currentMode="NORMAL_MODE" />
+        <EpicView />
       </div>
     )
   }

@@ -30,7 +30,7 @@ const cardColumn = (column: string) =>
         assignee={card.assignee}
         creator={card.creator}
         dateCreated={card.dateCreated}
-        stage={card.stage}
+        column={card.column}
         tags={card.tags}
       />
     ))
