@@ -1,15 +1,13 @@
-// react
 import * as React from 'react'
 import { Component } from 'react'
 import { connect } from 'react-redux'
 
-// components
 import { EpicView } from './js/views/EpicView'
+
 import { SetKeyModes } from './js/utils/KeyModes'
 import { ModeBar } from './js/components/ModeBar'
 import { Components } from './js/views/Components'
 
-// styles
 import './scss/_base.scss'
 
 class App extends Component {
