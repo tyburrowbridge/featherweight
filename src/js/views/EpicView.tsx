@@ -1,8 +1,10 @@
 import React from 'react'
+
 import { EPICS_DATA } from '../../data/EPICS_DATA'
 import { COLUMNS } from '../../data/COLUMNS'
+
 import { EpicHeader } from '../components/EpicHeader'
-import { CardColumn } from '../components/CardColumn'
+import { Column } from '../components/Column'
 
 export const EpicView = () => {
   return (
@@ -11,7 +13,7 @@ export const EpicView = () => {
         <EpicHeader />
       </div>
       {COLUMNS.map((column: any, index: number) => {
-        return <CardColumn key={index} title={column} />
+        return <Column key={index} title={column} />
       })}
     </div>
   )

@@ -1,7 +1,16 @@
 import React from 'react'
 
-export const WavyLine: React.FC = () => {
-  return <div className="wavy-line">wavy line</div>
+interface WavyLineProps {
+  visible: boolean
+}
+
+export const WavyLine: React.FC<WavyLineProps> = props => {
+  console.log(`wavy visible :   ${props.visible}`)
+  return (
+    <div
+      className={`wavy-line wavy-line${props.visible ? '--show' : '--hide'}`}
+    />
+  )
 }
 
 // const WavyLineSVG = (cordinates: string) => {

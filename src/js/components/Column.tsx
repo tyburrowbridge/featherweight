@@ -2,7 +2,7 @@ import React from 'react'
 import Card from './Card'
 import data from '../../data/CARDS.json'
 
-interface CardObj {
+type CardObj = {
   [key: string]: any
   id: number
   title: string
@@ -15,11 +15,11 @@ interface CardObj {
 
 const cards: CardObj = data.cards as any
 
-interface CardColumnProps {
+interface ColumnProps {
   title: string
 }
 
-const cardColumn = (column: string) =>
+const addCardColumns = (column: string) =>
   cards
     .filter((card: CardObj) => card.column === column)
     .map((card: CardObj, index: number) => (
@@ -35,19 +35,14 @@ const cardColumn = (column: string) =>
       />
     ))
 
-export const CardColumn: React.FC<CardColumnProps> = props => {
+export const Column: React.FC<ColumnProps> = props => {
   return (
     <div className="card-column">
       <div className={`card-column__${props.title}`}>
         <div className="card-column__card-holder">
-          {cardColumn(props.title)}
+          {addCardColumns(props.title)}
         </div>
       </div>
     </div>
   )
-}
-export default CardColumn
-
-CardColumn.defaultProps = {
-  title: 'New Column'
 }

@@ -18,15 +18,16 @@ interface CardProps {
 }
 
 const working = COLUMNS[1]
-const showWavyLine = (column: string) => {
-  column === working ? 'wavy-line--show' : 'wavy-line--hide'
-}
 
 export const Card: React.FC<CardProps> = props => {
   return (
     <div>
       <div className="card" onClick={handleCardClick}>
-        {}
+        <div
+          className={`card-line${
+            props.column === working ? '--wavy' : '--flat'
+          }`}
+        />
         <div className="card-id">{props.id}</div>
         <div className="card-assignee">
           <UserInitials fullName={props.assignee} />

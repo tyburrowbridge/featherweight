@@ -1,6 +1,7 @@
 .card {
   display: grid;
   grid-template-areas:
+    'LT   LT    LT'
     'cID  .  cAS'
     'cL cL cL'
     'cL cL cL'
@@ -66,4 +67,11 @@
 
 .card-id {
   grid-area: cID;
+}
+
+.card-line--wavy {
+  border: 1px dashed red;
+}
+.card-line--flat {
+  border: 1px solid white;
 }
