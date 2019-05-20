@@ -1,25 +1,23 @@
 import * as React from 'react'
 import { Component } from 'react'
 import { connect } from 'react-redux'
+import { Route, Switch } from 'react-router-dom'
 
 import { EpicView } from './js/views/EpicView'
-
 import { SetKeyModes } from './js/utils/KeyModes'
-import { ModeBar } from './js/components/ModeBar'
 import { Components } from './js/views/Components'
 
 import './scss/_base.scss'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="app__wrapper">
-        <EpicView />
-      </div>
-    )
-  }
+export const App = () => {
+  return (
+    <div className="app__wrapper">
+      <SetKeyModes />
+      <Switch>
+        <Route path="*" component={EpicView} />
+      </Switch>
+    </div>
+  )
 }
 
 export default App
-
-// import { WavyLine } from './js/components/WavyLine'
