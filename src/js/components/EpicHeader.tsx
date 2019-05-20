@@ -1,12 +1,10 @@
 import React from 'react'
 import { EPICS_DATA } from '../../data/EPICS_DATA'
 
-interface EpicHeaderProps {}
-
 const epicLabel = EPICS_DATA[0].label
 const epicStory = EPICS_DATA[0].story
 
-export const EpicHeader: React.FC<EpicHeaderProps> = props => {
+export const EpicHeader: React.FC = props => {
   return (
     <div className="epic-header__wrapper">
       <h1>{epicLabel}</h1>
@@ -16,10 +14,3 @@ export const EpicHeader: React.FC<EpicHeaderProps> = props => {
 }
 
 export default EpicHeader
-
-EpicHeader.defaultProps = {
-  label: 'no epic defined',
-  story: 'no user story defined'
-}
-
-// const tinySquare = <div className="tiny-square">hi.</div>
