@@ -1,13 +1,29 @@
 .mode-bar__wrapper {
-  background-color: #333;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row nowrap;
+  background-color: $bluescreen--dark;
+  color: $white;
+  padding-top: $pad--base;
+  padding-bottom: $pad--base;
+  padding-left: $pad--base;
 }
 
 .mode-bar__wrapper--normal {
-  background-color: pink;
+  background-color: $bluescreen--dark;
+  color: $white;
 }
 .mode-bar__wrapper--visual {
-  background-color: green;
+  background-color: $mint;
+  color: $mint--dark;
 }
 .mode-bar__wrapper--insert {
-  background-color: purple;
+  background-color: $ash;
+  color: $bluescreen;
+}
+
+.mode-bar__item {
+  width: 200px;
+  min-width: 150px;
+  margin-left: $pad--fat;
 }
