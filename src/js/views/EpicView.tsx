@@ -5,16 +5,17 @@ import { COLUMNS } from '../../data/COLUMNS'
 
 import { EpicHeader } from '../components/EpicHeader'
 import { Column } from '../components/Column'
+import { ModeBar } from '../components/ModeBar'
 
 export const EpicView = () => {
   return (
     <div className="epic-view__wrapper">
-      <div className="epic-header__wrapper">
-        <EpicHeader />
-      </div>
-      {COLUMNS.map((column: any, index: number) => {
-        return <Column key={index} title={column} />
-      })}
+      <EpicHeader />
+      {columns}
     </div>
   )
 }
+
+const columns = COLUMNS.map((column: any, index: number) => {
+  return <Column key={index} title={column} />
+})
