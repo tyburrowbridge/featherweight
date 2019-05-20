@@ -1,13 +1,10 @@
-// TODO: add card states --> backlog, doing, ready, done
-
 import React from 'react'
 import { TagPill } from './TagPill'
 import { UserInitials } from './UserInitials'
 import { DiagonalLine } from '../components/DiagonalLine'
-import { WavyLine } from '../components/WavyLine'
 import { COLUMNS } from '../../data/COLUMNS'
 
-interface CardProps {
+type CardProps = {
   id: number
   title: string
   creator: string
@@ -18,16 +15,20 @@ interface CardProps {
 }
 
 const working = COLUMNS[1]
+const ready = COLUMNS[2]
 
 export const Card: React.FC<CardProps> = props => {
   return (
-    <div>
-      <div className="card" onClick={handleCardClick}>
-        <div
-          className={`card-line${
-            props.column === working ? '--wavy' : '--flat'
-          }`}
-        />
+    <div
+      className={`card card${props.column === ready ? '--selected' : ''}`}
+      onClick={handleCardClick}
+    >
+      <div
+        className={`wavy-line wavy-line${
+          props.column === working ? '--show' : '--hide'
+        }`}
+      />
+      <div className="card-inner__wrapper">
         <div className="card-id">{props.id}</div>
         <div className="card-assignee">
           <UserInitials fullName={props.assignee} />

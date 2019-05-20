@@ -1,9 +1,8 @@
 import React from 'react'
+import Card from './Card'
 import data from '../../data/CARDS.json'
-import { Card } from './Card'
-import { Cards } from './Cards'
 
-type CardObj = {
+interface CardObj {
   [key: string]: any
   id: number
   title: string
@@ -16,7 +15,7 @@ type CardObj = {
 
 const cards: CardObj = data.cards as any
 
-interface ColumnProps {
+interface CardColumnProps {
   title: string
 }
 
@@ -36,7 +35,7 @@ const addCardColumns = (column: string) =>
       />
     ))
 
-export const Column: React.FC<ColumnProps> = props => {
+export const CardColumn: React.FC<CardColumnProps> = props => {
   return (
     <div className="card-column">
       <div className={`card-column__${props.title}`}>
@@ -46,4 +45,9 @@ export const Column: React.FC<ColumnProps> = props => {
       </div>
     </div>
   )
+}
+export default CardColumn
+
+CardColumn.defaultProps = {
+  title: 'New Column'
 }

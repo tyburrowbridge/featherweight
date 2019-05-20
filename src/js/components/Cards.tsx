@@ -1,8 +1,7 @@
 import React from 'react'
 import data from '../../data/CARDS.json'
-import Card from './Card'
 
-interface CardObj {
+type CardObj = {
   [key: string]: any
   id: number
   title: string
@@ -15,8 +14,6 @@ interface CardObj {
 
 const cards: CardObj = data.cards as any
 
-interface CardsProps = {}
-
 export const Cards = () => {
- return()  
+  return <div />
 }
