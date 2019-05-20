@@ -1,7 +1,7 @@
 // Steps
 $step: 10;
-$step2x: 30;
-$step3x: 20;
+$step2x: 20;
+$step3x: 30;
 
 // Ash (183,183,183)
 $ash: rgba(183, 183, 183, 1);
@@ -14,15 +14,15 @@ $ash--dark: darken($ash, 60%);
 $mint: rgba(129, 209, 153, 1);
 $mint--super-light: lighten($mint, $step3x);
 $mint--light: lighten($mint, $step2x);
-$mint--super-dark: darken($mint, 90%);
 $mint--dark: darken($mint, 60%);
+$mint--super-dark: darken($mint, 90%);
 
 // Peach (221,126,117)
 $peach: rgba(221, 126, 117, 1);
 $peach--super-light: lighten($peach, $step3x);
 $peach--light: lighten($peach, $step2x);
-$peach--super-dark: darken($peach, 90%);
 $peach--dark: darken($peach, 60%);
+$peach--super-dark: darken($peach, 90%);
 
 // Whites
 // $white: rgba(210, 210, 210, 1);
@@ -33,12 +33,12 @@ $white--40pct: rgba($white, 0.4);
 $seafoam: rgba(59, 198, 196, 1);
 $seafoam--super-light: lighten($seafoam, $step3x);
 $seafoam--light: lighten($seafoam, $step2x);
-$seafoam--super-dark: darken($seafoam, 90%);
 $seafoam--dark: darken($seafoam, 60%);
+$seafoam--super-dark: darken($seafoam, 90%);
 
 // Bluescreen (0,146,214)
 $bluescreen: rgba(8, 79, 221, 1);
 $bluescreen--super-light: lighten($bluescreen, $step3x);
 $bluescreen--light: lighten($bluescreen, $step2x);
-$bluescreen--super-dark: darken($bluescreen, 90%);
-$bluescreen--dark: darken($bluescreen, 60%);
+$bluescreen--dark: darken($bluescreen, 20%);
+$bluescreen--super-dark: darken($bluescreen, 30%);
