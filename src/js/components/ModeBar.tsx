@@ -2,41 +2,39 @@ import React from 'react'
 import { Component } from 'react'
 import { useState } from 'react'
 import { connect } from 'react-redux'
-import { NORMAL_MODE, VISUAL_MODE, INSERT_MODE } from '../components/Modes'
+import { NORMAL_MODE, VISUAL_MODE, INSERT_MODE } from '../../data/MODES'
 
-interface ModeBarProps {
+const normal = NORMAL_MODE.name
+const visual = VISUAL_MODE.name
+const insert = INSERT_MODE.name
+
+type ModeBarProps = {
   currentMode: string
+  currentCard: number
 }
 
-export const ModeBar: React.FC<ModeBarProps> = ({ currentMode }) => {
-  const [mode, setMode] = useState(NORMAL_MODE)
-  const updateMode = (mode: string) => {
-    mode === NORMAL_MODE
-      ? setMode('mode-bar__wrapper--normal')
-      : mode === VISUAL_MODE
-      ? setMode('mode-bar__wrapper--visual')
-      : mode === INSERT_MODE
-      ? setMode('mode-bar__wrapper--insert')
-      : 'undefined'
-  }
+const updateModeBarStyle = (mode: string): string => {
+  return mode === normal
+    ? '--normal'
+    : mode === visual
+    ? '--visual'
+    : mode === insert
+    ? '--insert'
+    : 'no mode passed'
+}
+
+export const ModeBar: React.FC<ModeBarProps> = props => {
+  const currentMode = props.currentMode
+  const currentCard = props.currentCard
 
   return (
-    <div>
-      <div className="">
-        <h3> there is the modebar </h3>
-        <button onClick={() => updateMode(NORMAL_MODE)}>Normal Mode</button>
-        <button onClick={() => updateMode(VISUAL_MODE)}>Visual Mode</button>
-        <button onClick={() => updateMode(INSERT_MODE)}>Insert Modei</button>
-      </div>
+    <div
+      className={`mode-bar__wrapper mode-bar__wrapper${updateModeBarStyle(
+        currentMode
+      )}`}
+    >
+      <div className="mode-bar__item">{currentMode}</div>
+      <div className="mode-bar__item">card: {currentCard}</div>
     </div>
   )
 }
-
-//    return mode === NORMAL_MODE
-//      ? 'mode-bar__wrapper--normal'
-//      : mode === VISUAL_MODE
-//      ? 'mode-bar__wrapper--visual'
-//      : mode === INSERT_MODE
-//      ? 'mode-bar__wrapper--insert'
-//      : NORMAL_MODE
-//
