@@ -10,6 +10,13 @@ $ash--light: lighten($ash, $step2x);
 $ash--super-dark: darken($ash, 90%);
 $ash--dark: darken($ash, 60%);
 
+// Grey ()
+$grey: rgb(137, 137, 142);
+$grey--super-light: lighten($grey, $step3x);
+$grey--light: lighten($grey, $step2x);
+$grey--super-dark: darken($grey, 90%);
+$grey--dark: darken($grey, 60%);
+
 // Mint (129,209,153)
 $mint: rgba(129, 209, 153, 1);
 $mint--super-light: lighten($mint, $step3x);
