@@ -1,8 +1,9 @@
 // Mixins
 @import './mixins/_declare-font-faces';
 
-// Fonts
+// Config
 @import './config/font-faces';
+@import './config/input-resets';
 
 // Settings
 @import './settings/units';
@@ -11,15 +12,16 @@
 @import './settings/typography';
 
 // Components
-@import './components/card-column';
 @import './components/card';
+@import './components/card-column';
+@import './components/epic-header';
 @import './components/tag-pill';
 @import './components/mode-bar';
-@import './components/epic-header';
 @import './components/wavy-line';
 
 // Views
 @import './views/epic-view';
+@import './views/new-card-view';
 
 // App
 @import './app';
