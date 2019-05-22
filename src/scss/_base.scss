@@ -3,7 +3,7 @@
 
 // Config
 @import './config/font-faces';
-@import './config/input-resets';
+@import './config/input-reset';
 
 // Settings
 @import './settings/units';
@@ -17,6 +17,7 @@
 @import './components/epic-header';
 @import './components/tag-pill';
 @import './components/mode-bar';
+@import './components/progress-bar';
 @import './components/wavy-line';
 
 // Views

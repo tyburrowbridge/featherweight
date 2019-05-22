@@ -1,28 +1,25 @@
 import React from 'react'
+import { Percent } from '../utils/Math'
 
-interface ProgressBarProps {
-  complete: number
-  total: number
+type ProgressBarProps = {
+  progress: number
+  limit: number
+  width: number
 }
 
-const percent = (x: number, y: number) => {
-  return (x / y) * 100
-}
+export const ProgressBar: React.FC<ProgressBarProps> = props => {
+  const progress = props.progress
+  const limit = props.limit
 
-export const ProgressBar: React.SFC<ProgressBarProps> = props => {
-  const complete = props.complete
-  const total = props.total
-  return (
-    <div className="progress-bar">
-      <div>
-        {complete + ' / ' + total + ' (%' + percent(complete, total) + ')'}
-      </div>
-    </div>
-  )
+  const progressBarStyle = {
+    width: `${100 - Percent(progress, limit)}px`
+  }
+
+  return <div className="progress-bar" style={progressBarStyle} />
 }
-export default ProgressBar
 
 ProgressBar.defaultProps = {
-  complete: 5,
-  total: 10
+  progress: 5,
+  limit: 10,
+  width: 200
 }
