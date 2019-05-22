@@ -10,10 +10,12 @@ import { ModeBar } from '../components/ModeBar'
 
 export const EpicView = () => {
   return (
-    <div className="epic-view__wrapper">
+    <div>
       <SetKeyModes />
-      <EpicHeader />
-      {columns}
+      <div className="epic-view__wrapper">
+        <EpicHeader />
+        {columns}
+      </div>
     </div>
   )
 }
