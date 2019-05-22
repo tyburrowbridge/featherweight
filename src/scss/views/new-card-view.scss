@@ -1,0 +1,31 @@
+.new-card__wrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: $white;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.new-card-textarea {
+  width: 80vw;
+  height: auto;
+  font-size: 6em;
+  letter-spacing: -3.25px;
+  color: $bluescreen;
+  box-shadow: none;
+  border: none;
+  font-family: 'Fira';
+  background: none;
+  padding: $pad--base;
+  margin-left: -5px;
+}
+
+.new-card-textarea::placeholder {
+  color: $grey--super-light;
+}
+
+.new-card__charCount {
+  color: $bluescreen;
+}
