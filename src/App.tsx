@@ -4,17 +4,17 @@ import { connect } from 'react-redux'
 import { Route, Switch } from 'react-router-dom'
 
 import { EpicView } from './js/views/EpicView'
-import { SetKeyModes } from './js/utils/KeyModes'
 import { Components } from './js/views/Components'
+import { NewCardView } from './js/views/NewCardView'
 
 import './scss/_base.scss'
 
 export const App = () => {
   return (
     <div className="app__wrapper">
-      <SetKeyModes />
       <Switch>
-        <Route path="*" component={EpicView} />
+        <Route exact path="/" component={EpicView} />
+        <Route exact path="/new-card" component={NewCardView} />
       </Switch>
     </div>
   )
