@@ -1,17 +1,9 @@
 import React from 'react'
 
-
 type EpicListViewProps = {
-    epicSelected: number
-
+  epicSelected: number
 }
 
-
-export const HelloComponent = React.FC<EpicListViewProps> = props=> {
-    
- return(
-    <div className="hc__wrapper">
-       hello world
-    </div>
- )   
+export const HelloComponent: React.FC<EpicListViewProps> = props => {
+  return <div className="hc__wrapper">Epic List View</div>
 }
