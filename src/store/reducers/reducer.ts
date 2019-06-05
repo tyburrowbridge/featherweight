@@ -1,7 +1,7 @@
 import { NORMAL_MODE, VISUAL_MODE, INSERT_MODE } from '../../data/MODES'
 
 const initialState = {
-  mode: NORMAL_MODE.name,
+  mode: NORMAL_MODE,
   cardSelected: 0
 }
 
@@ -11,17 +11,17 @@ export const appReducer = (state = initialState, action: any) => {
   console.log('current mode    : ' + newState.mode)
 
   // action template
-  if (action.type === NORMAL_MODE.name) {
-    newState.mode = NORMAL_MODE.name
+  if (action.type === NORMAL_MODE) {
+    newState.mode = NORMAL_MODE
     console.log('updated mode    : ' + newState.mode)
   }
 
-  if (action.type === VISUAL_MODE.name) {
-    newState.mode = VISUAL_MODE.name
+  if (action.type === VISUAL_MODE) {
+    newState.mode = VISUAL_MODE
     console.log('updated mode    : ' + newState.mode)
   }
-  if (action.type === INSERT_MODE.name) {
-    newState.mode = INSERT_MODE.name
+  if (action.type === INSERT_MODE) {
+    newState.mode = INSERT_MODE
     console.log('updated mode    : ' + newState.mode)
   }
 

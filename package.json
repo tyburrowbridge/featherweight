@@ -1,9 +1,13 @@
 {
-  "name": "simple",
+  "name": "featherweight",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/animejs": "^2.0.1",
+    "@babel/core": "7.1.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.4.5",
     "@types/jest": "^23.3.10",
     "@types/node": "^10.12.12",
     "@types/react": "^16.7.13",
@@ -11,7 +15,8 @@
     "@types/react-redux": "^7.0.6",
     "@types/react-router": "^5.0.0",
     "@types/react-router-dom": "^4.3.3",
-    "animejs": "^3.0.1",
+    "acorn": "5.7.3",
+    "babel-preset-react-app": "^9.0.0",
     "core-js": "3",
     "node-sass": "^4.10.0",
     "react": "^16.8.6",
@@ -21,7 +26,7 @@
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.1",
     "redux": "^4.0.1",
-    "typescript": "^3.2.1"
+    "typescript": "3.4.5"
   },
   "scripts": {
     "start": "react-scripts start",

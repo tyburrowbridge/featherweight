@@ -2,30 +2,29 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { useState, useEffect } from 'react'
-import { NORMAL_MODE, VISUAL_MODE, INSERT_MODE } from '../../data/MODES'
+import {
+  NORMAL_MODE,
+  NORMAL_MODE_KEY,
+  VISUAL_MODE,
+  VISUAL_MODE_KEY,
+  INSERT_MODE,
+  INSERT_MODE_KEY
+} from '../../data/MODES'
 import { ModeBar } from '../components/ModeBar'
 
-// variables
-const normal = NORMAL_MODE.name
-const normalKey = NORMAL_MODE.key
-const visual = VISUAL_MODE.name
-const visualKey = VISUAL_MODE.key
-const insert = INSERT_MODE.name
-const insertKey = INSERT_MODE.key
-
 type KeyModeProps = {
-  normalMode: () => {}
-  visualMode: () => {}
-  insertMode: () => {}
+  toggleNormalMode: () => {}
+  toggleVisualMode: () => {}
+  toggleInsertMode: () => {}
   incrementCardSelected: () => {}
   cardSelected: number
   mode: string
 }
 
 const KeyModes: React.FC<KeyModeProps> = ({
-  normalMode,
-  visualMode,
-  insertMode,
+  toggleNormalMode,
+  toggleVisualMode,
+  toggleInsertMode,
   incrementCardSelected,
   cardSelected,
   mode
@@ -33,18 +32,24 @@ const KeyModes: React.FC<KeyModeProps> = ({
   const [keyPressed, setKeyPressed] = useState(false)
 
   const downHandler = (key: any) => {
-    key.keyCode === normalKey ? (normalMode(), setKeyPressed(true)) : null
-    key.keyCode === visualKey ? (visualMode(), setKeyPressed(true)) : null
-    key.keyCode === insertKey ? (insertMode(), setKeyPressed(true)) : null
+    key.keyCode === NORMAL_MODE_KEY
+      ? (toggleNormalMode(), setKeyPressed(true))
+      : null
+    key.keyCode === VISUAL_MODE_KEY
+      ? (toggleVisualMode(), setKeyPressed(true))
+      : null
+    key.keyCode === INSERT_MODE_KEY
+      ? (toggleInsertMode(), setKeyPressed(true))
+      : null
     incrementCardSelected()
     console.log(`key pressed :   ${key.keyCode}`)
   }
 
   // If released key is our target key then set to false
   const upHandler = (key: any) => {
-    key.keyCode === normalKey ? setKeyPressed(false) : null
-    key.keyCode === visualKey ? setKeyPressed(false) : null
-    key.keyCode === insertKey ? setKeyPressed(false) : null
+    key.keyCode === NORMAL_MODE_KEY ? setKeyPressed(false) : null
+    key.keyCode === VISUAL_MODE_KEY ? setKeyPressed(false) : null
+    key.keyCode === INSERT_MODE_KEY ? setKeyPressed(false) : null
   }
 
   // Add event listeners
@@ -68,9 +73,9 @@ const mapStateToProps = (state: any, ownProps: any) => {
 }
 const mapDispatchToProps = (dispatch: any) => {
   return {
-    normalMode: () => dispatch({ type: normal }),
-    visualMode: () => dispatch({ type: visual }),
-    insertMode: () => dispatch({ type: insert }),
+    toggleNormalMode: () => dispatch({ type: NORMAL_MODE }),
+    toggleVisualMode: () => dispatch({ type: VISUAL_MODE }),
+    toggleInsertMode: () => dispatch({ type: INSERT_MODE }),
     incrementCardSelected: () => dispatch({ type: 'INCREMENT_CARD' })
   }
 }

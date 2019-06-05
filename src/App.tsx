@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import { Route, Switch } from 'react-router-dom'
 
 import { EpicView } from './js/views/EpicView'
-import { Components } from './js/views/Components'
 import { NewCardView } from './js/views/NewCardView'
 
 import './scss/_base.scss'

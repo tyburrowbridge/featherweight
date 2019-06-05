@@ -1,12 +1,5 @@
 import React from 'react'
-import { Component } from 'react'
-import { useState } from 'react'
-import { connect } from 'react-redux'
 import { NORMAL_MODE, VISUAL_MODE, INSERT_MODE } from '../../data/MODES'
-
-const normal = NORMAL_MODE.name
-const visual = VISUAL_MODE.name
-const insert = INSERT_MODE.name
 
 type ModeBarProps = {
   currentMode: string
@@ -14,13 +7,13 @@ type ModeBarProps = {
 }
 
 const updateModeBarStyle = (mode: string): string => {
-  return mode === normal
+  return mode === NORMAL_MODE
     ? '--normal'
-    : mode === visual
-    ? '--visual'
-    : mode === insert
-    ? '--insert'
-    : 'no mode passed'
+    : mode === VISUAL_MODE
+      ? '--visual'
+      : mode === INSERT_MODE
+        ? '--insert'
+        : 'no mode passed'
 }
 
 export const ModeBar: React.FC<ModeBarProps> = props => {
