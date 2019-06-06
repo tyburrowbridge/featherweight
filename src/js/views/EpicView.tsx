@@ -1,12 +1,10 @@
 import React from 'react'
 
-import { EPICS_DATA } from '../../data/EPICS_DATA'
 import { COLUMNS } from '../../data/COLUMNS'
 
 import { EpicHeader } from '../components/EpicHeader'
 import { SetKeyModes } from '../utils/KeyModes'
 import { Column } from '../components/Column'
-import { ModeBar } from '../components/ModeBar'
 
 export const EpicView = () => {
   return (

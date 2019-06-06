@@ -6,16 +6,6 @@ type ModeBarProps = {
   currentCard: number
 }
 
-const updateModeBarStyle = (mode: string): string => {
-  return mode === NORMAL_MODE
-    ? '--normal'
-    : mode === VISUAL_MODE
-      ? '--visual'
-      : mode === INSERT_MODE
-        ? '--insert'
-        : 'no mode passed'
-}
-
 export const ModeBar: React.FC<ModeBarProps> = props => {
   const currentMode = props.currentMode
   const currentCard = props.currentCard
@@ -30,4 +20,14 @@ export const ModeBar: React.FC<ModeBarProps> = props => {
       <div className="mode-bar__item">card: {currentCard}</div>
     </div>
   )
+}
+
+const updateModeBarStyle = (mode: string): string => {
+  return mode === NORMAL_MODE
+    ? '--normal'
+    : mode === VISUAL_MODE
+      ? '--visual'
+      : mode === INSERT_MODE
+        ? '--insert'
+        : 'no mode passed'
 }
