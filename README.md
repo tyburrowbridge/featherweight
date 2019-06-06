@@ -5,9 +5,13 @@ Featherweight is a modal kanban that adds speed and fluidity by being highly per
 ### TODOs
 
 TODO: add appsync / graphql / apollo
+
 TODO: add views to create epics, projects, and cards
+
 TODO: add modal selection of cards
+
 TODO: add modal editing of a card
+
 TODO: add visual mode to select cards & move their order / column
 
 ---
