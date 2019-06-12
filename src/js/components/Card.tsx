@@ -1,31 +1,30 @@
-import React from 'react'
-import { TagPill } from './TagPill'
-import { UserInitials } from './UserInitials'
-import { DiagonalLine } from '../components/DiagonalLine'
-import { COLUMNS } from '../../data/COLUMNS'
+// TODO: refactor tags
+import React from "react"
+import { TagPill } from "./TagPill"
+import { UserInitials } from "./UserInitials"
+import { DiagonalLine } from "../components/DiagonalLine"
+import { BACKLOG, WORKING, READY, DONE } from "../../data/COLUMNS"
 
 type CardProps = {
   id: number
   title: string
-  creator: string
-  assignee: string
   dateCreated: string
+  owner: string
+  assignee: string
+  status: string
+  archived: boolean
   tags: any
-  column: string
 }
 
-const working = COLUMNS[1]
-const ready = COLUMNS[2]
-
-export const Card: React.FC<CardProps> = props => {
+export const Card: React.FC<CardProps> = (props) => {
   return (
     <div
-      className={`card card${props.column === ready ? '--selected' : ''}`}
+      className={`card card${props.status === READY ? "--selected" : ""}`}
       onClick={handleCardClick}
     >
       <div
         className={`wavy-line wavy-line${
-          props.column === working ? '--show' : '--hide'
+          props.status === WORKING ? "--show" : "--hide"
         }`}
       />
       <div className="card-inner__wrapper">
@@ -36,11 +35,11 @@ export const Card: React.FC<CardProps> = props => {
         <h2 className="card-title"> {props.title} </h2>
         <div className="card-tags">{addTagsToCard(props.tags)}</div>
         <div className="card-creator">
-          date created: {props.dateCreated} by {props.creator}
+          date created: {props.dateCreated} by {props.owner}
         </div>
         <div
           className={`card__diagonal-line-wrapper ${applyDoneStyleToCard(
-            props.column
+            props.status
           )}`}
         >
           <DiagonalLine color="#ffeedd" />
@@ -51,15 +50,15 @@ export const Card: React.FC<CardProps> = props => {
 }
 export default Card
 
-const handleCardClick = () => console.log('hehe, you clicked a card')
+const handleCardClick = () => console.log("hehe, you clicked a card")
 
-const addTagsToCard = (tags: any) =>
-  tags.map((tag: any, index: number) => {
-    return <TagPill label={tag} key={index} />
-  })
+const addTagsToCard = (tags: any) => <div>refactor</div>
+//tags.map((tag: any, index: number) => {
+// return <TagPill label={tag} key={index} />
+// })
 
-const applyDoneStyleToCard = (x: string) => {
-  const done =
-    x === 'done' ? `.card__diagonal-line--show` : `card__diagonal-line--hide`
-  return done
+const applyDoneStyleToCard = (status: string) => {
+  return status === DONE
+    ? `.card__diagonal-line--show`
+    : `card__diagonal-line--hide`
 }
