@@ -13,11 +13,11 @@ import { Provider } from "react-redux"
 import { createStore } from "redux"
 import { appReducer } from "./store/reducers/reducer"
 
-import { App } from "./App"
-
+import App from "./App"
 import "./index.css"
 
 const store = createStore(appReducer)
+
 const client = new Client({
   url: AppSync.aws_appsync_graphqlEndpoint,
   region: AppSync.aws_appsync_region,
@@ -29,15 +29,15 @@ const client = new Client({
 
 serviceWorker.unregister()
 const WithProvider = () => (
-  <ApolloProvider client={client}>
-    <Rehydrated>
-      <BrowserRouter>
-        <Provider store={store}>
+  <BrowserRouter>
+    <ApolloProvider client={client}>
+      <Provider store={store}>
+        <Rehydrated>
           <App />
-        </Provider>
-      </BrowserRouter>
-    </Rehydrated>
-  </ApolloProvider>
+        </Rehydrated>
+      </Provider>
+    </ApolloProvider>
+  </BrowserRouter>
 )
 
 ReactDOM.render(<WithProvider />, document.getElementById("root"))
